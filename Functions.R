@@ -3,10 +3,10 @@ utils::globalVariables(c("pkg_env"))
 pkg_env <- new.env(parent = emptyenv())
 pkg_env$rapidpro_key <- NULL
 pkg_env$rapidpro_site <- NULL
-pkg_env$rapidpro_uuid_names <- NULL 
+pkg_env$rapidpro_uuid_names <- NULL
 
-set_rapidpro_uuid_names = function(uuid_names = get_flow_names()){
-  pkg_env$rapidpro_uuid_names <- uuid_names 
+set_rapidpro_uuid_names <- function(uuid_names = get_flow_names()){
+  pkg_env$rapidpro_uuid_names <- uuid_names
 }
 
 # aesthetics - removing _, and making first letter capital
