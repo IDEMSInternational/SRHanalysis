@@ -1,9 +1,3 @@
-library(shiny)
-library(shinythemes)
-library(shinyjs)
-library(plotly)
-library(shinydashboard)
-library(survival)
 # 3. Define UI -----------------------------------------------------------------------------
 srh_shiny <- function(country = "Jamaica", study = "SRH"){
   # Define UI
@@ -275,7 +269,6 @@ srh_shiny <- function(country = "Jamaica", study = "SRH"){
   
   # 4. Define Server -----------------------------------------------------------------------------
   server <- function(input, output) {
-    print("B")
     # General Set Up ---------------------------------------------------
     #autoRefresh <- reactiveTimer(6 * 60 * 60 * 1000)
     srh_bank <- update_data(consent_only = FALSE)

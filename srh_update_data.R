@@ -13,7 +13,8 @@ update_data <- function(type = "srh user", date_from = "2021-10-14", date_to = N
   set_rapidpro_key(key = key[[1]])
   set_rapidpro_uuid_names()
   
-  contacts_unflat <- get_user_data(call_type="contacts.json", type = "srh_user")
+  # TODO: How to get contacts.json?joined=srh_user
+  contacts_unflat <- get_user_data(call_type="contacts.json?joined=srh_user")
   
   created_on <- contacts_unflat$created_on
   did_not_consent <- contacts_unflat$fields$did_not_consent
